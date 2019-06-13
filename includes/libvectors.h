@@ -6,12 +6,12 @@
 /*   By: tmaluh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 12:16:52 by tmaluh            #+#    #+#             */
-/*   Updated: 2019/06/12 21:18:55 by tmaluh           ###   ########.fr       */
+/*   Updated: 2019/06/13 09:13:10 by tmaluh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_VECTORS_H
-# define LIBFT_VECTORS_H
+#ifndef LIBVECTORS_H
+# define LIBVECTORS_H
 
 # include <math.h>
 # include <stdint.h>
