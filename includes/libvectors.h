@@ -6,7 +6,7 @@
 /*   By: tmaluh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 12:16:52 by tmaluh            #+#    #+#             */
-/*   Updated: 2019/06/13 21:51:32 by tmaluh           ###   ########.fr       */
+/*   Updated: 2019/07/29 15:10:40 by tmaluh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ V4DF;
 V4DU;
 # endif
 
-# define X(v) v[0]
-# define Y(v) v[1]
-# define Z(v) v[2]
-# define W(v) v[3]
+# define X(v) (v)[0]
+# define Y(v) (v)[1]
+# define Z(v) (v)[2]
+# define W(v) (v)[3]
 
 # define VDISC(a, b, c) ((b) * (b) - 4.0 * (a) * (c))
 
