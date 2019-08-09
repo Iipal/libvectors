@@ -6,15 +6,15 @@
 /*   By: tmaluh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 22:34:31 by tmaluh            #+#    #+#             */
-/*   Updated: 2019/06/22 19:04:35 by tmaluh           ###   ########.fr       */
+/*   Updated: 2019/08/09 11:48:15 by tmaluh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvectors.h"
 
-inline __v4df	v_norm(const __v4df v)
+__v4df	v_norm(__v4df const v)
 {
-	const double_t	vlen = v_len(v);
+	double_t const	vlen = v_len(v);
 
 	return ((__v4df){X(v) / vlen, Y(v) / vlen, Z(v) / vlen, 0.0});
 }

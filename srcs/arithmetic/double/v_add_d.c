@@ -6,13 +6,13 @@
 /*   By: tmaluh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 14:02:42 by tmaluh            #+#    #+#             */
-/*   Updated: 2019/06/12 17:04:45 by tmaluh           ###   ########.fr       */
+/*   Updated: 2019/08/09 11:49:58 by tmaluh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvectors.h"
 
-inline __v4df	v_add_d(const __v4df v, const double_t d)
+__v4df	v_add_d(__v4df const v, double_t const d)
 {
 	return ((__v4df){X(v) + d, Y(v) + d, Z(v) + d, 0.0});
 }

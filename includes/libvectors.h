@@ -6,7 +6,7 @@
 /*   By: tmaluh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 12:16:52 by tmaluh            #+#    #+#             */
-/*   Updated: 2019/07/29 15:10:40 by tmaluh           ###   ########.fr       */
+/*   Updated: 2019/08/09 11:51:42 by tmaluh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,34 +35,34 @@ V4DU;
 
 # define VDISC(a, b, c) ((b) * (b) - 4.0 * (a) * (c))
 
-extern double_t	v_len(const __v4df v);
-extern double_t	v_dot(const __v4df v1, const __v4df v2);
+double_t	v_len(__v4df const v);
+double_t	v_dot(__v4df const v1, __v4df const v2);
 
-extern __v4df	v_norm(const __v4df v);
+__v4df		v_norm(__v4df const v);
 
-extern __v4df	v_mul_d(const __v4df v, const double_t d);
-extern __v4df	v_add_d(const __v4df v, const double_t d);
-extern __v4df	v_sub_d(const __v4df v, const double_t d);
-extern __v4df	v_div_d(const __v4df v, const double_t d);
+__v4df		v_mul_d(__v4df const v, double_t const d);
+__v4df		v_add_d(__v4df const v, double_t const d);
+__v4df		v_sub_d(__v4df const v, double_t const d);
+__v4df		v_div_d(__v4df const v, double_t const d);
 
-extern __v4df	v_mul_v(const __v4df a, const __v4df b);
-extern __v4df	v_add_v(const __v4df a, const __v4df b);
-extern __v4df	v_sub_v(const __v4df a, const __v4df b);
-extern __v4df	v_div_v(const __v4df a, const __v4df b);
+__v4df		v_mul_v(__v4df const a, __v4df const b);
+__v4df		v_add_v(__v4df const a, __v4df const b);
+__v4df		v_sub_v(__v4df const a, __v4df const b);
+__v4df		v_div_v(__v4df const a, __v4df const b);
 
-extern __v4df	v_invert(const __v4df v);
+__v4df		v_invert(__v4df const v);
 
 /*
 **	u_ prefix is short name for utils.
 */
-extern bool		u_vec_range(__v4df v,
-					const double_t max_range,
-					const double_t min_range);
-extern bool		u_isd_range(double_t a,
-					const double_t max_range,
-					const double_t min_range);
-extern double_t	u_d_range(double_t x,
-					const double_t max_range,
-					const double_t min_range);
+bool		u_vec_range(__v4df const v,
+					double_t const max_range,
+					double_t const min_range);
+bool		u_isd_range(double_t const a,
+					double_t const max_range,
+					double_t const min_range);
+double_t	u_d_range(double_t const x,
+					double_t const max_range,
+					double_t const min_range);
 
 #endif

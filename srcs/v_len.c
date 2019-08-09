@@ -6,13 +6,13 @@
 /*   By: tmaluh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 09:31:40 by tmaluh            #+#    #+#             */
-/*   Updated: 2019/06/12 17:13:30 by tmaluh           ###   ########.fr       */
+/*   Updated: 2019/08/09 11:48:27 by tmaluh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvectors.h"
 
-inline double_t	v_len(const __v4df v)
+double_t	v_len(__v4df const v)
 {
 	return (sqrt(v_dot(v, v)));
 }
