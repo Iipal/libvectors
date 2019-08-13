@@ -6,7 +6,7 @@
 /*   By: tmaluh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 12:16:52 by tmaluh            #+#    #+#             */
-/*   Updated: 2019/08/13 10:14:10 by tmaluh           ###   ########.fr       */
+/*   Updated: 2019/08/13 13:34:40 by tmaluh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 # define LIBVECTORS_H
 
 # include <math.h>
-# include <stdint.h>
 # include <stdbool.h>
 
 # if defined __APPLE__
 #  include <immintrin.h>
 # else
-#  include <emmintrin.h>
 #  include <stddef.h>
 #  define V4DF typedef double __v4df __attribute__((vector_size(32),aligned))
 #  define V4DU typedef size_t __v4du __attribute__((vector_size(32),aligned))
