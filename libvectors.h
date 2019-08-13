@@ -6,7 +6,7 @@
 /*   By: tmaluh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 12:16:52 by tmaluh            #+#    #+#             */
-/*   Updated: 2019/08/13 13:34:40 by tmaluh           ###   ########.fr       */
+/*   Updated: 2019/08/13 19:13:58 by tmaluh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,20 @@
 
 # include <math.h>
 # include <stdbool.h>
+# include <stddef.h>
+
+# include <sys/cdefs.h>
+# ifndef __always_inline
+#  define __always_inline inline __attribute__((__always_inline__))
+# endif
+
+# ifndef __lvec_always_inline
+#  define __lvec_always_inline static __always_inline
+# endif
 
 # if defined __APPLE__
 #  include <immintrin.h>
 # else
-#  include <stddef.h>
 #  define V4DF typedef double __v4df __attribute__((vector_size(32),aligned))
 #  define V4DU typedef size_t __v4du __attribute__((vector_size(32),aligned))
 
@@ -33,10 +42,6 @@ V4DU;
 # define W(v) (v)[3]
 
 # define VDISC(a, b, c) ((b) * (b) - 4.0 * (a) * (c))
-
-# ifndef __lvec_always_inline
-#  define __lvec_always_inline static __always_inline
-# endif
 
 __lvec_always_inline double_t
 v_dot(__v4df const v1, __v4df const v2)
