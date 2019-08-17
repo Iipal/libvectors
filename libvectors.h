@@ -6,7 +6,7 @@
 /*   By: tmaluh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 12:16:52 by tmaluh            #+#    #+#             */
-/*   Updated: 2019/08/13 19:13:58 by tmaluh           ###   ########.fr       */
+/*   Updated: 2019/08/17 15:02:43 by tmaluh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,11 @@
 #  include <immintrin.h>
 # else
 #  define V4DF typedef double __v4df __attribute__((vector_size(32),aligned))
+#  define V2DF typedef double __v2df __attribute__((vector_size(16),aligned))
 #  define V4DU typedef size_t __v4du __attribute__((vector_size(32),aligned))
 
 V4DF;
+V2DF;
 V4DU;
 # endif
 
