@@ -6,7 +6,7 @@
 /*   By: tmaluh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 12:16:52 by tmaluh            #+#    #+#             */
-/*   Updated: 2019/09/02 21:56:30 by tmaluh           ###   ########.fr       */
+/*   Updated: 2019/10/03 18:14:34 by tmaluh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,6 @@
 #  define __lvec_always_inline static __always_inline
 # endif
 
-# if defined __APPLE__
-#  include <immintrin.h>
-# else
 #  define V4DF typedef double t_v4df __attribute__((vector_size(32),aligned))
 #  define V2DF typedef double t_v2df __attribute__((vector_size(16),aligned))
 #  define V4DU typedef size_t t_v4du __attribute__((vector_size(32),aligned))
@@ -36,7 +33,6 @@
 V4DF;
 V2DF;
 V4DU;
-# endif
 
 # define X(v) (v)[0]
 # define Y(v) (v)[1]
